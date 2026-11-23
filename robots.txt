@@ -1,0 +1,18 @@
+# 伴心 BANXIN · robots.txt
+# 上线前必改：把下面的 banxin.example.com 换成真实域名（与 <link rel="canonical"> 保持一致）
+#
+# 策略：全站可抓。不 Disallow 任何正常路径——404.html 用页面内的 noindex 处理，
+# 用 Disallow 拦掉反而会让爬虫看不到 noindex，也读不到 404 页的真实文案。
+
+User-agent: *
+Allow: /
+
+# 一行覆盖所有「下划线开头的调试/联调页」（/_probe.html、/_check.html、/_measure.html …）。
+# robots.txt 的 Disallow 是前缀匹配，所以 /_ 就是全部。
+# 真正的防线是 deploy/build.sh 的白名单复制：这些文件根本不会进产物。
+Disallow: /_
+
+# 抓取延迟（百度对单站建议 0.5–1；Google 忽略此项，无害）
+Crawl-delay: 1
+
+Sitemap: https://banxin.example.com/sitemap.xml

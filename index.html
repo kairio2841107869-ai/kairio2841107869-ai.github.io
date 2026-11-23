@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FDF3F6">
+<title>伴心 BANXIN · 一台麦金塔式的 AI 陪伴主机</title>
+<meta name="description" content="伴心是一台麦金塔式的 AI 陪伴主机：约 250 × 240 × 320 mm，正面一块屏，下方一格抽屉。路由器、移动 WiFi、AI 助手装在这一台里，叫一声「伴心，你在吗？」她就应你。¥999 首批预购中。">
+<!-- TODO(site-url): 域名未定（site-spec N5）。上线前把下面 3 处 example 域名换成真实 SITE_URL -->
+<link rel="canonical" href="https://banxin.example.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="伴心 BANXIN">
+<meta property="og:title" content="伴心 BANXIN · 一台麦金塔式的 AI 陪伴主机">
+<meta property="og:description" content="插上网线是家里的网络中枢，抽屉里收着一台可以带走的小终端。路由、移动 WiFi、AI 助手，三个身份装进这一台麦金塔。">
+<meta property="og:url" content="https://banxin.example.com/">
+<meta property="og:image" content="https://banxin.example.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="伴心 BANXIN 分享卡：左侧一枚玫红色像素心徽标，右侧「伴心」字标、BANXIN 与英文标语 COMPANION FOR EVERY LONELY HEART">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="伴心 BANXIN · 一台麦金塔式的 AI 陪伴主机">
+<meta name="twitter:description" content="插上网线是家里的网络中枢，抽屉里收着一台可以带走的小终端。路由、移动 WiFi、AI 助手，三个身份装进这一台麦金塔。">
+<meta name="twitter:image" content="https://banxin.example.com/assets/img/og-cover.png">
+<meta name="twitter:image:alt" content="伴心 BANXIN 分享卡：左侧一枚玫红色像素心徽标，右侧「伴心」字标、BANXIN 与英文标语 COMPANION FOR EVERY LONELY HEART">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+<!-- 越早越好：无 JS 时所有「待淡入」的初始隐藏都不生效（site-spec 8.3.3） -->
+<script>document.documentElement.classList.add('js-enabled');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "伴心 BANXIN",
+      "url": "https://banxin.example.com/",
+      "logo": "https://banxin.example.com/assets/img/favicon.svg",
+      "slogan": "我们致力于温暖每一位用户孤独的心灵",
+      "description": "伴心是一台麦金塔式的 AI 陪伴主机，把路由器、移动 WiFi 与 AI 助手装进一台机器。"
+    },
+    {
+      "@type": "Product",
+      "name": "伴心 BANXIN AI 陪伴终端",
+      "description": "白色哑光圆润边缘机身，约 250×240×320 mm，正面一块屏，下方一格抽屉。Wi-Fi 6 双频与 4G/5G 全网通，伴心芯 BX-1 端侧 AI 专用，唤醒词「伴心，你在吗？」。本地优先、端侧加密、数据不上云。",
+      "image": "https://banxin.example.com/assets/img/og-cover.png",
+      "brand": { "@type": "Brand", "name": "伴心 BANXIN" },
+      "offers": {
+        "@type": "Offer",
+        "price": "999",
+        "priceCurrency": "CNY",
+        "availability": "https://schema.org/PreOrder",
+        "url": "https://banxin.example.com/#buy"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "处理器", "value": "伴心芯 BX-1 端侧 AI 专用" },
+        { "@type": "PropertyValue", "name": "网络", "value": "Wi-Fi 6 双频 · 4G/5G 全网通" },
+        { "@type": "PropertyValue", "name": "形态", "value": "三合一" },
+        { "@type": "PropertyValue", "name": "尺寸", "value": "约 250×240×320 mm" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主内容</a>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     内联 SVG 资源库（0×0，不参与布局）：像素心 / 功能图标 / 产品主视觉部件
+     装饰性 SVG 一律 aria-hidden="true" focusable="false"
+     ══════════════════════════════════════════════════════════════════════════ -->
+<svg class="svg-defs" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <!-- ── 像素图标：8 列 × 7 行栅格（design-spec §5.6）────────────────── -->
+    <symbol id="i-heart" viewBox="0 0 8 7">
+      <path d="M1 0h2v1H1zM5 0h2v1H5zM0 1h8v3H0zM1 4h6v1H1zM2 5h4v1H2zM3 6h2v1H3z"/>
+    </symbol>
+    <symbol id="i-help" viewBox="0 0 8 7">
+      <path d="M1 0h5v1H1zM5 1h1v1H5zM4 2h2v1H4zM3 3h2v1H3zM3 4h2v1H3zM3 6h2v1H3z"/>
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 8 7">
+      <path d="M0 0h8v5H5v1H3V5H0z"/>
+    </symbol>
+    <symbol id="i-box" viewBox="0 0 8 7">
+      <path d="M3 0h2v1H3zM1 1h6v1H1zM0 2h8v1H0zM0 3h3v4H0zM5 3h3v4H5z"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 8 7">
+      <path d="M1 0h6v1H1zM0 1h2v1H0zM6 1h2v1H6zM0 2h1v1H0zM2 2h1v1H2zM5 2h1v1H5zM7 2h1v1H7zM0 3h1v1H0zM3 3h2v1H3zM7 3h1v1H7zM0 4h1v1H0zM7 4h1v1H7zM0 5h2v1H0zM6 5h2v1H6zM1 6h6v1H1z"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 8 7">
+      <path d="M2 0h4v1H2zM1 1h6v3H1zM1 4h6v1H1zM2 5h4v1H2zM3 6h2v1H3z"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 8 8">
+      <path d="M0 0L8 8M8 0L0 8" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+    <symbol id="i-chev" viewBox="0 0 8 3">
+      <path d="M0 0h2v1H0zM6 0h2v1H6zM2 1h2v1H2zM4 1h2v1H4zM3 2h2v1H3z"/>
+    </symbol>
+
+    <!-- ── 机身（§9.3 / §9.4）：三个面 + 接缝 + 棱线高光 ────────────────── -->
+    <g id="bx-shell">
+      <path class="dev-face-side" d="M93.53 -54L65.82 -38V70l27.71-16z"/>
+      <path class="dev-face-front" d="M-27.71 -92L65.82 -38V70l-93.53-54z"/>
+      <path class="dev-face-top" d="M0 -108l93.53 54-27.71 16L-27.71 -92z"/>
+      <path class="dev-seam" d="M-27.71 -92L65.82 -38"/>
+      <path class="dev-seam" d="M93.53 -54L65.82 -38"/>
+      <path class="dev-seam-strong" d="M65.82 -38V70"/>
+      <path class="dev-outline" d="M0 -108l93.53 54v108l-27.71 16-93.53-54v-108z"/>
+      <path class="dev-edge-hi-1" d="M0 -108l93.53 54"/>
+      <path class="dev-edge-hi-2" d="M0 -108l-27.71 16"/>
+      <circle class="dev-vertex-hi" cx="0" cy="-108" r="1"/>
+    </g>
+
+    <!-- ── 屏幕内的 UI（§9.6，5 层，局部 2D 坐标 0–92.88 × 0–73.44）────── -->
+    <clipPath id="clip-screen">
+      <rect width="92.88" height="73.44" rx="6"/>
+    </clipPath>
+    <g id="bx-screen-ui">
+      <g clip-path="url(#clip-screen)">
+        <rect class="dev-screen-glass" width="92.88" height="73.44" rx="6"/>
+        <rect class="dev-screen-glow" x="5" y="5" width="82.88" height="63.44" rx="3.5"/>
+        <rect x="0" y="0" width="92.88" height="1.3" fill="url(#g-screen-in-top)"/>
+        <rect x="0" y="0" width="1.3" height="73.44" fill="url(#g-screen-in-left)"/>
+        <rect x="0" y="72.14" width="92.88" height="1.3" fill="url(#g-screen-bevel-bottom)"/>
+        <rect x="91.58" y="0" width="1.3" height="73.44" fill="url(#g-screen-bevel-right)"/>
+        <rect class="dev-win-body" x="9.3" y="12.7" width="74.3" height="46" rx="3"/>
+        <path class="dev-win-bar" d="M9.3 15.7a3 3 0 0 1 3-3h69.3a3 3 0 0 1 3 3v5h-74.3z"/>
+        <circle class="dev-win-dot" cx="12.6" cy="16.7" r="0.9"/>
+        <circle class="dev-win-dot" cx="16.6" cy="16.7" r="0.9"/>
+        <circle class="dev-win-dot" cx="20.6" cy="16.7" r="0.9"/>
+        <text class="dev-win-text" x="24.6" y="17.9" font-size="3.4">BANXIN · 伴心</text>
+        <text class="dev-win-text" x="13.4" y="30.5" font-size="4.4">&gt; 伴心，你在吗？<tspan class="cursor">▍</tspan></text>
+        <text class="dev-win-text-dim" x="13.4" y="38.5" font-size="3">&gt; 系统在线</text>
+        <g class="dev-screen-heart" transform="translate(78 59.5) scale(0.85)">
+          <path d="M1 0h2v1H1zM5 0h2v1H5zM0 1h8v3H0zM1 4h6v1H1zM2 5h4v1H2zM3 6h2v1H3z"/>
+        </g>
+        <rect x="-4" y="-4" width="30" height="86" fill="url(#g-glare)" transform="rotate(6 46 37)"/>
+      </g>
+    </g>
+
+    <!-- ── 顶部天线槽（§9.8）────────────────────────────────────────────────
+         全部画在**顶面平面内**：外层就是顶面的仿射矩阵
+         matrix(0.86603 0.5 −0.86603 0.5 0 −108)，(a,b) 里写普通矩形，
+         长边自然落在 +30°、短边落在 150°，与顶面两条棱严格平行。
+         凹进去是靠三层叠出来的，不是靠描边（描边会让它像一张贴纸）：
+           ① 槽底   比顶面暗一档、**无 stroke**
+           ② 后缘阴影 只压 b 小的一侧（光从左上来，槽的后壁被挡住）
+           ③ 前缘亮边 贴 b 大的一侧，模拟切口倒角吃光
+         两条天线短线在槽底之上。 -->
+    <g id="bx-antenna" transform="matrix(0.86603 0.5 -0.86603 0.5 0 -108)">
+      <rect class="dev-antenna-slot" x="41.04" y="4" width="25.92" height="8.64" rx="0.6"/>
+      <rect class="dev-antenna-shade" x="41.04" y="4" width="25.92" height="2.8" rx="0.6"/>
+      <rect class="dev-antenna-lip" x="41.04" y="11.64" width="25.92" height="1"/>
+      <rect class="dev-antenna-line" x="45" y="5.5" width="1.5" height="5.7" rx="0.75"/>
+      <rect class="dev-antenna-line" x="63" y="5.5" width="1.5" height="5.7" rx="0.75"/>
+    </g>
+
+    <!-- ── 下巴像素心徽标（§9.5，u/t 坐标，单格 2.2mm，17.6 × 15.4）──────── -->
+    <g id="bx-chin-logo">
+      <g transform="matrix(0.86603 0.5 0 1 -27.713 -92)">
+        <g class="dev-logo" transform="translate(45.2 85.72) scale(2.2)">
+          <path d="M1 0h2v1H1zM5 0h2v1H5zM0 1h8v3H0zM1 4h6v1H1zM2 5h4v1H2zM3 6h2v1H3z"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- ── 亮屏整机（hero-device / buy-device 共用，§9.9）──────────────────
+         同一段几何只写一次：#bx-device-lit 被两处 <use> 引用，
+         差异（暖光强度 / 半径、点阵步进）全部由外层 CSS 变量覆盖。 -->
+    <g id="bx-device-lit">
+      <use href="#bx-shell"/>
+      <use href="#device-face"/>
+      <use href="#bx-chin-logo"/>
+      <use href="#bx-antenna" class="dev-antenna-use"/>
+    </g>
+
+    <!-- ── 暗屏整机（product-exterior / product-form 共用，§9.9）──────────── -->
+    <g id="bx-device-dark">
+      <use href="#bx-shell"/>
+      <use href="#device-face-idle"/>
+      <use href="#bx-chin-logo"/>
+    </g>
+
+    <!-- ══ 假设 A1 的可替换层：机身正面「屏区」（§1.4 / §9.5）══════════════
+         客户未确认实物是否有屏。四个插槽里凡是屏区，全部只经由下面两个
+         <g> 进入（id="device-face" 亮屏 / id="device-face-idle" 暗屏），
+         二者共用同一段矩阵与同一块几何，屏内容只放在子层。
+         若回话「无屏」，按下表改这两个 <g> 的子层即可，机身几何一行不动：
+           ① 屏区整块填正面同款纵向渐变（#FFFDFE → #F2E8EC），不描边、不开槽；
+           ② 徽标从下巴移到该区域正中，放大到 34 × 29.8mm（单格 4.25mm）；
+           ③ 在 t = 78.84 处补一道 1mm #E3C9CE 分模线（原屏幕下缘）；
+           ④ 删掉 #bx-screen-ui 整层，#product 段 2 改为「正面徽标特写」。
+         矩阵（§9.6）：(u,t) → (0.86603u − 27.713, 0.5u − 92 + t)，
+         之后 translate(7.56 5.4) 把原点挪到屏幕左上角，里面全是 2D 好算的数。
+         四点自检：(0,0)→(−27.71,−92) (108,0)→(65.82,−38)
+                  (0,108)→(−27.71,16) (108,108)→(65.82,70) -->
+    <g id="device-face">
+      <g transform="matrix(0.86603 0.5 0 1 -27.713 -92) translate(7.56 5.4)">
+        <!-- 屏外辉光（§9.5 第 5 层：外扩 3mm / 玫瑰粉 35%） -->
+        <rect class="dev-screen-bleed" x="-3" y="-3" width="98.88" height="79.44" rx="9" filter="url(#f-soft-glow)"/>
+        <!-- 开口边缘线（壳体切口厚度，0.8mm） -->
+        <rect class="dev-screen-rim" x="-0.4" y="-0.4" width="93.68" height="74.24" rx="6.4"/>
+        <use href="#bx-screen-ui"/>
+      </g>
+    </g>
+
+    <g id="device-face-idle">
+      <g transform="matrix(0.86603 0.5 0 1 -27.713 -92) translate(7.56 5.4)">
+        <rect class="dev-screen-rim" x="-0.4" y="-0.4" width="93.68" height="74.24" rx="6.4"/>
+        <rect class="dev-screen-glass" width="92.88" height="73.44" rx="6"/>
+        <text class="dev-screen-idle-text" x="6" y="68" font-size="3">待机</text>
+        <circle class="dev-screen-idle-dot" cx="81" cy="65" r="1.1"/>
+      </g>
+    </g>
+
+    <!-- ── 渐变（可见色全部来自 tokens.css 的 class）────────────────────── -->
+    <linearGradient id="g-dev-front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" class="dev-front-a"/>
+      <stop offset="1" class="dev-front-b"/>
+    </linearGradient>
+    <radialGradient id="g-env-glow">
+      <stop offset="0" class="env-glow-a"/>
+      <stop offset="1" class="env-glow-b"/>
+    </radialGradient>
+    <radialGradient id="g-env-glow-soft">
+      <stop offset="0" class="env-glow-soft-a"/>
+      <stop offset="1" class="env-glow-soft-b"/>
+    </radialGradient>
+    <radialGradient id="g-env-shadow">
+      <stop offset="0" class="env-shadow-a"/>
+      <stop offset="1" class="env-shadow-b"/>
+    </radialGradient>
+    <radialGradient id="g-env-contact">
+      <stop offset="0" class="env-contact-a"/>
+      <stop offset="1" class="env-contact-b"/>
+    </radialGradient>
+    <linearGradient id="g-screen-in-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" class="dev-screen-inner-a"/>
+      <stop offset="1" class="dev-screen-inner-b"/>
+    </linearGradient>
+    <linearGradient id="g-screen-in-left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" class="dev-screen-inner-a"/>
+      <stop offset="1" class="dev-screen-inner-b"/>
+    </linearGradient>
+    <linearGradient id="g-screen-bevel-bottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" class="dev-screen-bevel-b"/>
+      <stop offset="1" class="dev-screen-bevel-a"/>
+    </linearGradient>
+    <linearGradient id="g-screen-bevel-right" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" class="dev-screen-bevel-b"/>
+      <stop offset="1" class="dev-screen-bevel-a"/>
+    </linearGradient>
+    <linearGradient id="g-glare" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" class="dev-glare-a"/>
+      <stop offset="1" class="dev-glare-b"/>
+    </linearGradient>
+
+    <!-- 柔和辉光（hero 屏外暖光）。σ=2 unit × scale(4.2) ≈ 8.4px 可见外沿。
+         只用在这一处静态元素上；§9.4 禁止的 filter: drop-shadow 依旧不用。
+         ⚠ 本滤镜被 hero 的 dev-screen-bleed 共用，禁止为 product-system 单边调参
+           ——任何改动都会同时改变 hero 的暖光（见 #f-sys-glow）。 -->
+    <filter id="f-soft-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+
+    <!-- product-system 专用辉光，不与 #f-soft-glow 共用。
+         σ = 1 unit = 1mm；高斯尾在 3σ = 3mm 处降到 alpha≈0.4%（不可见）。
+         辉光矩形与壳体同沿外扩 2mm，故可见外沿 = 屏外 5mm = 84.5px（竖向）。
+         竖向每外扩 1mm = b + d = 3.476 + 13.42 = 16.896px（不是 12.96 —— 12.96 只对横向 a 成立）。
+         改 σ 必连带改画布：σ=2 ⇒ 竖向占用 9mm ⇒ 需画布 1613px。 -->
+    <filter id="f-sys-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#hero" aria-label="伴心 BANXIN，回到页面顶部">
+      <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg>
+      <span class="brand__text">
+        <span class="brand__cn">伴心</span>
+        <span class="brand__en">BANXIN</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="主导航">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#prologue" data-nav="prologue">伴心</a></li>
+        <li><a class="nav__link" href="#product" data-nav="product">产品</a></li>
+        <li><a class="nav__link" href="#chapters" data-nav="chapters">场景故事</a></li>
+        <li><a class="nav__link" href="#specs" data-nav="specs">技术</a></li>
+        <li><a class="nav__link" href="#news" data-nav="news">资讯</a></li>
+        <li><a class="nav__link" href="#support" data-nav="support">支持</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--buy btn-buy" href="#buy" data-nav="buy">预购伴心</a>
+      <button class="hamburger" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="打开导航菜单">
+        <span class="hamburger__box" aria-hidden="true">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+</header>
+
+<!-- 移动端全屏抽屉（F03） -->
+<div class="drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="站内导航" aria-hidden="true">
+  <div class="drawer__top">
+    <span class="brand">
+      <svg class="drawer__mark" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg>
+      <span class="brand__text">
+        <span class="brand__cn">伴心</span>
+        <span class="brand__en">BANXIN</span>
+      </span>
+    </span>
+    <button class="drawer__close" type="button" data-drawer-close aria-label="关闭导航菜单">
+      <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+    </button>
+  </div>
+  <nav class="drawer__list" aria-label="移动端主导航">
+    <ul>
+      <li class="drawer__item"><a class="drawer__link" href="#prologue" data-nav="prologue"><span class="drawer__num">01</span>伴心</a></li>
+      <li class="drawer__item"><a class="drawer__link" href="#product" data-nav="product"><span class="drawer__num">02</span>产品</a></li>
+      <li class="drawer__item"><a class="drawer__link" href="#chapters" data-nav="chapters"><span class="drawer__num">03</span>场景故事</a></li>
+      <li class="drawer__item"><a class="drawer__link" href="#specs" data-nav="specs"><span class="drawer__num">04</span>技术</a></li>
+      <li class="drawer__item"><a class="drawer__link" href="#news" data-nav="news"><span class="drawer__num">05</span>资讯</a></li>
+      <li class="drawer__item"><a class="drawer__link" href="#support" data-nav="support"><span class="drawer__num">06</span>支持</a></li>
+    </ul>
+  </nav>
+  <div class="drawer__bottom">
+    <span class="drawer__price">¥999</span>
+    <a class="btn btn--buy" href="#buy">预购一台</a>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+
+<!-- ══════════════════════════════ 1 · #hero ═════════════════════════════════ -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero__inner">
+    <!-- 按客户参考样式改造（2026-11-23）：单列居中堆叠。
+         原「左文右图」两栏 → 胶囊标签 / 大字 / 副标题 / 产品标识卡 / 双按钮 / 向下滚动。
+         H1 语义不变（brand + tagline + sr-only 逗号），只是视觉重排。 -->
+    <p class="hero__badge" data-enter style="--enter-delay:0ms"><span class="hero__badge-en">BANXIN FLAGSHIP</span> — 伴心旗舰产品</p>
+
+    <h1 class="hero__title" id="hero-title" data-enter style="--enter-delay:100ms">
+      <span class="hero__brand">伴心</span><span class="sr-only">，</span>
+      <span class="hero__tagline">一台麦金塔式的 AI 陪伴主机，在夜里应你一声</span>
+    </h1>
+
+    <p class="hero__slogan" data-enter style="--enter-delay:180ms">我们致力于温暖每一位用户孤独的心灵。</p>
+
+    <!-- 产品标识卡：白卡 + 暖黑屏 + 像素心 + 字标（参考样式）。
+         纯 CSS/SVG 组合，不引入新图片；像素心复用 #i-heart，不新增请求。 -->
+    <div class="hero__card" data-enter="media" style="--enter-delay:240ms">
+      <div class="hero__card-screen" aria-hidden="true">
+        <svg class="hero__card-heart" viewBox="0 0 8 7"><use href="#i-heart"/></svg>
+      </div>
+      <p class="hero__card-cn">伴心</p>
+      <p class="hero__card-en">BANXIN</p>
+      <span class="hero__card-dot" aria-hidden="true"></span>
+    </div>
+
+    <div class="hero__cta" data-enter style="--enter-delay:320ms">
+      <button class="btn btn--primary" type="button" id="open-video" aria-expanded="false" aria-controls="video-modal">
+        观看影片<span class="btn__arrow" aria-hidden="true">▶</span>
+      </button>
+      <a class="btn btn--secondary" href="#product">深入了解<span class="btn__arrow" aria-hidden="true">→</span></a>
+    </div>
+
+    <p class="hero__scroll" data-enter style="--enter-delay:400ms">
+      <span class="hero__scroll-icon" aria-hidden="true"><svg viewBox="0 0 10 14" width="10" height="14" focusable="false"><path d="M5 0v11M1 7.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>向下滚动
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 2 · #prologue 开幕词 ═════════════════════════════ -->
+<section class="section screen prologue" id="prologue" aria-labelledby="prologue-title">
+  <h2 class="sr-only" id="prologue-title">伴心的四个给予</h2>
+  <div class="prologue__inner">
+    <p class="eyebrow">关于伴心</p>
+
+    <ul class="give-list" data-stagger="260">
+      <li class="give-item" data-reveal="up-sm">
+        <span class="give-item__num" aria-hidden="true">01</span>
+        <p class="give-item__text">在无人的夜晚，给予陪伴；</p>
+      </li>
+      <li class="give-item" data-reveal="up-sm">
+        <span class="give-item__num" aria-hidden="true">02</span>
+        <p class="give-item__text">在无助的时刻，给予帮助；</p>
+      </li>
+      <li class="give-item" data-reveal="up-sm">
+        <span class="give-item__num" aria-hidden="true">03</span>
+        <p class="give-item__text">在无语的时刻，给予沟通；</p>
+      </li>
+      <li class="give-item" data-reveal="up-sm">
+        <span class="give-item__num" aria-hidden="true">04</span>
+        <p class="give-item__text">在无声的世界，给予回应。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 3 · #product 产品两段 ═══════════════════════════ -->
+<section id="product" aria-labelledby="product-title">
+  <h2 class="sr-only" id="product-title">产品展示：一只盒子，三种身份</h2>
+
+  <!-- 段 1 · 麦金塔抽屉动画（2026-11-23：原段 4 的 3D 移入本段）
+       本段按客户要求**只保留动画**，原「外观图 + 01 文案」已删除。
+       渐进增强策略不变：poster ~40KB 打底，条件满足才拉 2.3MB GLB。
+       单列全宽：抽屉展开后比静态包围盒宽约 8.5%，model-viewer 的 auto-fit
+       只按静态包围盒算，两栏会被裁掉抽屉。 -->
+  <div class="product-block product-block--stage">
+    <div class="product-block__inner">
+      <div class="product-block__media dock-stage" data-dock>
+        <div class="dock-frame">
+          <!-- 移动端不加载 3D，poster 就是终态，所以直接给「抽屉已拉开」那一帧
+               （文案讲的是按下拉手托盘滑出来，给闭合图会与文案对不上）；
+               桌面端 poster 只做加载占位，用闭合帧与动画第一帧对齐，避免跳变。 -->
+          <picture>
+            <source media="(max-width: 767px)" srcset="/assets/img/dock-mac-open-720.webp">
+            <img class="dock-poster" src="/assets/img/dock-mac.webp"
+                 srcset="/assets/img/dock-mac-720.webp 720w, /assets/img/dock-mac.webp 1200w"
+                 sizes="(min-width: 768px) 560px, 86vw"
+                 width="1200" height="1500"
+                 alt="伴心终端收在抽屉托盘里：麦金塔式机身，屏幕显示「> 伴心，你在吗？」与「> 系统在线」，右下角一枚像素心"
+                 loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 段 2 · 伴心系统（图右文左） -->
+  <div class="product-block product-block--flip">
+    <div class="product-block__inner">
+      <div class="product-block__media device-field device-field--system">
+        <svg class="device-svg" viewBox="0 0 2000 1480" role="img" aria-labelledby="ps-title" data-parallax>
+          <title id="ps-title">伴心终端屏幕特写：复古系统窗口里显示「伴心，你在吗？」和一枚闪烁光标</title>
+          <!-- 屏幕特写：**正视图**（2026-11-23 客户要求，原为 15° 倾斜），
+               2mm 壳体边 + 3mm 辉光，不套窗框。
+               原矩阵 matrix(12.96 3.476 0 13.42) 里的 b=3.476 就是那 15° 剪切；
+               正视图去掉剪切，并把 a/d 统一成等比 scale(17.6)，否则纵向会被多拉 3.5%。
+               等比后：壳 96.88×77.44 → 1705×1363，+3mm 辉光（53.1/侧）→ 1811×1469，
+               画布 2000×1480 内水平余 94.5/侧、垂直余 5.5/侧。
+               原点仍取壳中心 (46.44, 36.72)，故 translate 不变。 -->
+          <g transform="translate(1000 740) scale(17.6) translate(-46.44 -36.72)">
+            <rect class="sys-bleed" x="-2" y="-2" width="96.88" height="77.44" rx="8" filter="url(#f-sys-glow)"/>
+            <rect class="sys-shell" x="-2" y="-2" width="96.88" height="77.44" rx="8"/>
+            <use href="#bx-screen-ui"/>
+          </g>
+        </svg>
+      </div>
+      <div class="product-block__copy" data-reveal>
+        <p class="product-block__num">01</p>
+        <h3 class="product-block__title">叫一声，她就应</h3>
+        <p class="product-block__text">AI 助手常驻机身，唤醒词只有一句「伴心，你在吗？」。她记得你的喜好，也接得住你的情绪：你上一句说得低，她下一句就不会太亮。</p>
+        <p class="product-block__caption">唤醒词「伴心，你在吗？」· 伴心芯 BX-1 端侧处理</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════ 4 · #features 功能矩阵 ═══════════════════════════ -->
+<section class="section features" id="features" aria-labelledby="features-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="features-title">她只做三件事。</h2>
+      <p class="lead">不是三个功能，是三个时刻。</p>
+    </div>
+
+    <div class="feature-grid" data-stagger="80">
+      <article class="feature-card" data-reveal>
+        <div class="feature-card__top">
+          <svg class="feature-card__icon" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg>
+          <span class="feature-card__num" aria-hidden="true">I</span>
+        </div>
+        <p class="feature-card__eyebrow">COMPANIONSHIP</p>
+        <h3 class="feature-card__title">陪伴</h3>
+        <p class="feature-card__text">夜里灯灭了，她在床头亮起微光，陪你说话，直到你睡着。</p>
+      </article>
+
+      <article class="feature-card" data-reveal>
+        <div class="feature-card__top">
+          <svg class="feature-card__icon" aria-hidden="true" focusable="false"><use href="#i-help"/></svg>
+          <span class="feature-card__num" aria-hidden="true">II</span>
+        </div>
+        <p class="feature-card__eyebrow">ASSISTANCE</p>
+        <h3 class="feature-card__title">帮助</h3>
+        <p class="feature-card__text">事情砸下来的时候，她先给答案和下一步，再陪你把手抖完。</p>
+      </article>
+
+      <article class="feature-card" data-reveal>
+        <div class="feature-card__top">
+          <svg class="feature-card__icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
+          <span class="feature-card__num" aria-hidden="true">III</span>
+        </div>
+        <p class="feature-card__eyebrow">COMMUNICATION</p>
+        <h3 class="feature-card__title">沟通</h3>
+        <p class="feature-card__text">说不出口的话，她替你理成句子；不想说的时候，她就安静听着。</p>
+      </article>
+    </div>
+
+    <p class="features__foot">唤醒词只有一句：「伴心，你在吗？」</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 5 · #chapters 场景三章 ═══════════════════════════ -->
+<section id="chapters" aria-labelledby="chapter-1-title">
+
+  <article class="chapter chapter--night" data-chapter aria-labelledby="chapter-1-title">
+    <div class="chapter__bg" aria-hidden="true"></div>
+    <div class="chapter__scrim" aria-hidden="true"></div>
+    <div class="chapter__inner">
+      <p class="chapter__num" aria-hidden="true">01</p>
+      <p class="chapter__eyebrow">CHAPTER 01</p>
+      <h2 class="chapter__title" id="chapter-1-title">无人的夜晚</h2>
+      <p class="chapter__quote">灯灭之后，声音亮起来。</p>
+      <p class="chapter__text">关灯之后，人反而不困。白天没处放的念头都回来了：那句话是不是说错了，明天的事怎么办，为什么很久没人问过我今天怎么样。你讲给她听，她不评价，只问一句「然后呢」。等你说完，也就睡着了。</p>
+      <p class="chapter__foot">熄灯后的卧室，只有床头一点暖光</p>
+    </div>
+  </article>
+
+  <article class="chapter chapter--help" data-chapter aria-labelledby="chapter-2-title">
+    <div class="chapter__bg" aria-hidden="true"></div>
+    <div class="chapter__scrim" aria-hidden="true"></div>
+    <div class="chapter__inner">
+      <p class="chapter__num" aria-hidden="true">02</p>
+      <p class="chapter__eyebrow">CHAPTER 02</p>
+      <h2 class="chapter__title" id="chapter-2-title">无助的时刻</h2>
+      <p class="chapter__quote">在你需要时，答案刚好在场。</p>
+      <p class="chapter__text">半夜水管爆了，临时被通知明天交方案，药盒上的字小到看不清。这些时候你需要的不是搜索框，是一句立刻能听懂的话：先做哪一步，再问你要不要更细的。她不会让你一个人干等。</p>
+      <p class="chapter__foot">深夜的桌面上摊着纸和一杯水，伴心终端在台灯旁边</p>
+    </div>
+  </article>
+
+  <article class="chapter chapter--voice" data-chapter aria-labelledby="chapter-3-title">
+    <div class="chapter__bg" aria-hidden="true"></div>
+    <div class="chapter__scrim" aria-hidden="true"></div>
+    <div class="chapter__inner">
+      <p class="chapter__num" aria-hidden="true">03</p>
+      <p class="chapter__eyebrow">CHAPTER 03</p>
+      <h2 class="chapter__title" id="chapter-3-title">无语的时刻</h2>
+      <p class="chapter__quote">把说不出口的，交给伴心。</p>
+      <p class="chapter__text">要提离职，要跟父母说自己过得不太好，要跟一个人道歉。你在心里排练了十遍，一开口还是乱。先讲给她听，她帮你分清哪句是真正想说的，哪句只是当时的气话。不打断，也不下判断。</p>
+      <p class="chapter__foot">夜里的窗边，桌上放着一张写了一半的纸</p>
+    </div>
+  </article>
+</section>
+
+<!-- ═══════════════════════ 6 · #specs 技术规格 ══════════════════════════════ -->
+<section class="section specs" id="specs" aria-labelledby="specs-title">
+  <div class="container">
+    <div class="specs__inner">
+      <div class="specs__aside">
+        <div class="section-head">
+          <h2 id="specs-title">都写在纸上的</h2>
+          <p class="lead">这些参数都能逐条核对。没有形容词。</p>
+        </div>
+      </div>
+
+      <div class="window spec-window">
+        <div class="window__bar" aria-hidden="true">
+          <span class="window__dot"></span>
+          <span class="window__dot"></span>
+          <span class="window__dot"></span>
+          <span class="window__title">BANXIN · 技术规格</span>
+        </div>
+
+        <table class="spec-table">
+          <caption>伴心技术规格</caption>
+          <thead>
+            <tr>
+              <th scope="col">参数</th>
+              <th scope="col">伴心 BANXIN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">处理器</th>
+              <td>伴心芯 BX-1 端侧 AI 专用</td>
+            </tr>
+            <tr>
+              <th scope="row">网络</th>
+              <td><span class="mono">Wi-Fi 6</span> 双频 · <span class="mono">4G/5G</span> 全网通</td>
+            </tr>
+            <tr>
+              <th scope="row">形态</th>
+              <td>三合一</td>
+            </tr>
+            <tr>
+              <th scope="row">尺寸</th>
+              <td><span class="mono nowrap">约 250×240×320 mm</span></td>
+            </tr>
+            <tr>
+              <th scope="row">机身</th>
+              <td>白色哑光圆润边缘 + 伴心徽标</td>
+            </tr>
+            <tr>
+              <th scope="row">唤醒词</th>
+              <td>「伴心，你在吗？」</td>
+            </tr>
+            <tr>
+              <th scope="row">隐私</th>
+              <td>本地优先 · 端侧加密 · 数据不上云</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="status-line">
+          <span class="status-line__prompt" aria-hidden="true">&gt;</span>
+          <span class="status-line__text" data-typing><span class="mono">banxin status</span> <span class="cn">—— 一切正常，伴心在线。</span></span>
+          <span class="cursor" aria-hidden="true">▍</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 7 · #news 资讯与更新 ═════════════════════════════ -->
+<section class="section news" id="news" aria-labelledby="news-title">
+  <div class="container">
+    <div class="news__inner">
+
+      <div class="news__main">
+        <div class="section-head">
+          <h2 id="news-title">最近的动静。</h2>
+        </div>
+
+        <ol class="news-list" data-stagger="60">
+          <li>
+            <article class="news-row" data-reveal>
+              <div class="news-row__head">
+                <span class="chip">系统</span>
+                <p class="news-row__title">伴心系统 v2.0 上线</p>
+                <time class="news-row__date" datetime="2026-10-24">2026.10.24</time>
+              </div>
+              <p class="news-row__summary">新增深夜电台与心事树洞。树洞说完就忘，不留记录。</p>
+            </article>
+          </li>
+          <li>
+            <article class="news-row" data-reveal>
+              <div class="news-row__head">
+                <span class="chip chip--preorder">预购</span>
+                <p class="news-row__title">首批预购开启</p>
+                <time class="news-row__date" datetime="2026-09-30">2026.09.30</time>
+              </div>
+              <p class="news-row__summary">¥999 首批预购价，顺丰包邮，预计 10 月底发货。</p>
+            </article>
+          </li>
+          <li>
+            <article class="news-row" data-reveal>
+              <div class="news-row__head">
+                <span class="chip chip--event">活动</span>
+                <p class="news-row__title">「与伴心共度的一夜」故事征集</p>
+                <time class="news-row__date" datetime="2026-08-15">2026.08.15</time>
+              </div>
+              <p class="news-row__summary">把你一个人的夜晚写下来。署什么名，由你决定。</p>
+            </article>
+          </li>
+          <li>
+            <article class="news-row" data-reveal>
+              <div class="news-row__head">
+                <span class="chip">模型</span>
+                <p class="news-row__title">端侧模型升级</p>
+                <time class="news-row__date" datetime="2026-07-02">2026.07.02</time>
+              </div>
+              <p class="news-row__summary">回应更快，日常对话更少停顿。这次升级不用你动手。</p>
+            </article>
+          </li>
+        </ol>
+      </div>
+
+      <div class="news__aside">
+        <div class="subscribe-card" data-reveal>
+          <h3 class="subscribe-card__title">先留个邮箱，发货时间定了第一时间告诉你。</h3>
+          <p class="subscribe-card__hint">我们只发送产品与预购相关邮件，可随时退订。</p>
+
+          <form class="form" data-form="subscribe" data-source="news_section" novalidate>
+            <div class="form-alert form-alert--danger" data-alert role="alert" aria-live="polite"></div>
+
+            <div class="field">
+              <label class="field__label" for="sub-email">邮箱地址 <span class="field__req">必填</span></label>
+              <div class="field__control">
+                <input class="input" id="sub-email" name="email" type="email" placeholder="请输入邮箱地址" autocomplete="email" aria-describedby="sub-email-err">
+              </div>
+              <p class="field__error" id="sub-email-err"></p>
+            </div>
+
+            <div class="field">
+              <label class="check" for="sub-consent">
+                <input id="sub-consent" name="consent" type="checkbox" aria-describedby="sub-consent-err">
+                <span>我愿意收到预购与更新邮件，并已阅读<a href="/privacy.html" target="_blank" rel="noopener noreferrer">《隐私政策》</a>。</span>
+              </label>
+              <p class="field__error" id="sub-consent-err"></p>
+            </div>
+
+            <input class="hp-field" type="text" name="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button class="btn btn--primary" type="submit">订阅<span class="btn__arrow" aria-hidden="true">→</span></button>
+          </form>
+
+          <div class="success-card" data-success aria-live="polite">
+            <div class="success-card__icon" aria-hidden="true">✓</div>
+            <p class="success-card__title">记下了。</p>
+            <p class="success-card__body" data-success-body></p>
+            <p class="success-card__note">想退订，每封信底部都有链接。</p>
+          </div>
+
+          <p class="subscribe-card__privacy">邮箱只用于这几类邮件，不提供给第三方。每封信底部都有退订链接。</p>
+
+          <!-- TODO(social-links): 拿到真实链接后改为 <a href="…" target="_blank" rel="noopener noreferrer"> -->
+          <div class="channels">
+            <p class="channels__title">在这些地方也能找到伴心</p>
+            <ul class="channels__list">
+              <li><span class="channel" aria-disabled="true" aria-label="伴心官方微博">微博</span></li>
+              <li><span class="channel" aria-disabled="true" aria-label="伴心官方 Bilibili">Bilibili</span></li>
+              <li><span class="channel" aria-disabled="true" aria-label="伴心官方小红书">小红书</span></li>
+              <li><span class="channel" aria-disabled="true" aria-label="伴心官方微信">微信</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 8 · #buy 购买 ════════════════════════════════════ -->
+<section class="section buy" id="buy" aria-labelledby="buy-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="buy-title">第一批伴心，正在装箱。</h2>
+      <p class="lead">首批预计 10 月底发货，顺丰包邮。</p>
+    </div>
+
+    <div class="buy__inner">
+      <div class="buy__aside">
+        <div class="buy__figure device-field device-field--buy">
+          <!-- 产品形态改为麦金塔本体后，下单区的「正面」也必须是麦金塔正面，
+               原先是等距小盒子（#bx-device-lit）。用正面视角渲染替代。 -->
+          <img class="buy-shot" src="/assets/img/mac-front.webp"
+               width="882" height="1100"
+               alt="伴心麦金塔正面：白色哑光机身，正面一块屏，下方一格抽屉，机身上一枚伴心徽标"
+               loading="lazy" decoding="async">
+        </div>
+
+        <div class="window price-card">
+          <div class="window__bar" aria-hidden="true">
+            <span class="window__dot"></span>
+            <span class="window__dot"></span>
+            <span class="window__dot"></span>
+            <span class="window__title">BANXIN · 首批预购</span>
+          </div>
+          <div class="window__body">
+            <div class="price-card__price">
+              <span class="price-card__now"><span class="price-card__currency">¥</span>999</span>
+              <span class="price-card__was">¥1299</span>
+            </div>
+            <p class="price-card__note">首批预购价 · 限量</p>
+
+            <ul class="benefit-list">
+              <li class="benefit"><span class="benefit__dot" aria-hidden="true"></span><span class="benefit__text">白色哑光机身 ×1</span></li>
+              <li class="benefit"><span class="benefit__dot" aria-hidden="true"></span><span class="benefit__text">伴心系统终身免费更新</span></li>
+              <li class="benefit"><span class="benefit__dot" aria-hidden="true"></span><span class="benefit__text">180 天只换不修 · 30 天无理由退换</span></li>
+              <li class="benefit"><span class="benefit__dot" aria-hidden="true"></span><span class="benefit__text">三合一</span></li>
+            </ul>
+
+            <p class="price-card__stock">首批预计 10 月底发货</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="buy__form-card">
+        <form class="form" data-form="preorder" novalidate>
+          <div class="form-alert form-alert--danger" data-alert role="alert" aria-live="polite"></div>
+
+          <div class="field">
+            <label class="field__label" for="pre-name">怎么称呼你 <span class="field__req">必填</span></label>
+            <div class="field__control">
+              <input class="input" id="pre-name" name="name" type="text" placeholder="例如：林小满" autocomplete="name" maxlength="20" aria-describedby="pre-name-err">
+            </div>
+            <p class="field__error" id="pre-name-err"></p>
+          </div>
+
+          <div class="field">
+            <p class="field__label" id="pre-ctype-label">联系方式 <span class="field__req">必填</span></p>
+            <div class="radio-group" role="radiogroup" aria-labelledby="pre-ctype-label" aria-describedby="pre-ctype-err">
+              <label class="radio"><input type="radio" name="contact_type" value="phone" checked><span>手机号</span></label>
+              <label class="radio"><input type="radio" name="contact_type" value="email"><span>邮箱</span></label>
+            </div>
+            <p class="field__error" id="pre-ctype-err"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="pre-contact" data-contact-label>手机号</label>
+            <div class="field__control">
+              <input class="input" id="pre-contact" name="contact_value" type="tel" placeholder="请输入手机号" inputmode="numeric" autocomplete="tel" aria-describedby="pre-contact-err">
+            </div>
+            <p class="field__error" id="pre-contact-err"></p>
+          </div>
+
+          <div class="field">
+            <p class="field__label" id="pre-sku-label">规格</p>
+            <div class="radio-group" role="radiogroup" aria-labelledby="pre-sku-label">
+              <label class="radio"><input type="radio" name="sku" value="flagship_white" checked><span>伴心旗舰版 · 白色</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="pre-qty">数量</label>
+            <div class="stepper">
+              <button class="stepper__btn" type="button" data-step="-1" aria-label="减少数量">−</button>
+              <input class="stepper__value" id="pre-qty" name="quantity" type="number" min="1" max="5" step="1" value="1" inputmode="numeric" aria-describedby="pre-qty-err">
+              <button class="stepper__btn" type="button" data-step="1" aria-label="增加数量">+</button>
+            </div>
+            <p class="field__error" id="pre-qty-err"></p>
+          </div>
+
+          <div class="field">
+            <label class="check" for="pre-consent">
+              <input id="pre-consent" name="consent" type="checkbox" aria-describedby="pre-consent-err">
+              <span>我已阅读并同意<a href="/privacy.html" target="_blank" rel="noopener noreferrer">《隐私政策》</a>与<a href="/terms.html" target="_blank" rel="noopener noreferrer">《用户协议》</a></span>
+            </label>
+            <p class="field__error" id="pre-consent-err"></p>
+          </div>
+
+          <input class="hp-field" type="text" name="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <p class="form-pay-note">本次为预购意向登记，暂不收款。</p>
+
+          <button class="btn btn--primary" type="submit">提交预购意向<span class="btn__arrow" aria-hidden="true">→</span></button>
+
+          <div class="buy__form-foot">
+            <p class="form-note">本次为预购意向登记，不收取任何费用；发货时间确认后我们将与您电话或邮件确认。</p>
+            <p class="form-note">我们不会把你的联系方式给到第三方。详见<a class="link-text" href="/privacy.html" target="_blank" rel="noopener noreferrer">《隐私政策》</a>。</p>
+          </div>
+        </form>
+
+        <div class="success-card" data-success aria-live="polite">
+          <div class="success-card__icon" aria-hidden="true">✓</div>
+          <p class="success-card__title">登记好了。</p>
+          <p class="success-card__body" data-success-body></p>
+          <p class="success-card__note">不收取任何费用，现在也不需要付款。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 9 · #support 支持 ═══════════════════════════════ -->
+<section class="section" id="support" aria-labelledby="support-title">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <h2 id="support-title">需要人的时候，这里有人。</h2>
+      <p class="lead">四个入口，从自己动手到找我们，都在这儿。</p>
+    </div>
+
+    <div class="support-grid" data-stagger="80">
+      <a class="support-card" href="/support.html#getting-started" data-reveal>
+        <svg class="support-card__icon" aria-hidden="true" focusable="false"><use href="#i-box"/></svg>
+        <h3 class="support-card__title">快速上手</h3>
+        <p class="support-card__text">开箱四步，从通电到第一次唤醒。</p>
+        <span class="support-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="support-card" href="/support.html#faq" data-reveal>
+        <svg class="support-card__icon" aria-hidden="true" focusable="false"><use href="#i-help"/></svg>
+        <h3 class="support-card__title">常见问题</h3>
+        <p class="support-card__text">断网、隐私、保修、发货，八条一次看明白。</p>
+        <span class="support-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="support-card" href="/support.html#contact-support" data-reveal>
+        <svg class="support-card__icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+        <h3 class="support-card__title">联系支持</h3>
+        <p class="support-card__text">人工客服与留言渠道。</p>
+        <span class="support-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="support-card" href="/support.html#repair" data-reveal>
+        <svg class="support-card__icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
+        <h3 class="support-card__title">维修与换新</h3>
+        <p class="support-card__text">180 天只换不修，怎么申请、寄到哪。</p>
+        <span class="support-card__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════ 10 · #footer 页脚 ════════════════════════════════ -->
+<footer class="site-footer" id="footer">
+  <div class="site-footer__inner">
+    <div class="footer-brand">
+      <div class="footer-brand__row">
+        <svg class="footer-brand__mark" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg>
+        <span class="footer-brand__cn">伴心</span>
+        <span class="footer-brand__en">BANXIN</span>
+      </div>
+      <p class="footer-brand__slogan">我们致力于温暖每一位用户孤独的心灵。</p>
+      <p class="footer-brand__en-line">COMPANION FOR EVERY LONELY HEART</p>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col__title">产品</p>
+      <ul class="footer-col__list">
+        <li><a href="#product">产品展示</a></li>
+        <li><a href="#specs">技术规格</a></li>
+        <li><a href="#buy">购买</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col__title">支持</p>
+      <ul class="footer-col__list">
+        <li><a href="/support.html">支持中心</a></li>
+        <li><a href="/support.html#faq">常见问题</a></li>
+        <li><a href="/support.html#contact-support">联系支持</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col__title">法律</p>
+      <ul class="footer-col__list">
+        <li><a href="/privacy.html">隐私政策</a></li>
+        <li><a href="/terms.html">用户协议</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__legal">
+    <!-- 整行 hidden：拿到真实备案号后只删 hidden（site-spec §4.4 区块 10） -->
+    <p hidden>ICP 备案号：<a href="#footer">占位</a></p>
+    <!-- 整行 hidden：客服邮箱 / 电话提供后只删 hidden -->
+    <p hidden>客服邮箱</p>
+    <!-- 整行 hidden：公司主体提供后只删 hidden -->
+    <p hidden>运营主体</p>
+    <p><a href="/privacy.html">隐私政策</a></p>
+    <p><a href="/terms.html">用户协议</a></p>
+  </div>
+
+  <div class="site-footer__bottom">
+    <p>© 2026 伴心 BANXIN. 保留所有权利。</p>
+    <svg class="footer-heart" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg>
+  </div>
+</footer>
+
+<!-- 返回顶部（F06） -->
+<button class="to-top" type="button" aria-label="返回顶部">
+  <span aria-hidden="true">↑</span>
+</button>
+
+<!-- 移动端底部常驻预购条（F13） -->
+<div class="buy-bar">
+  <p class="buy-bar__price">
+    <span class="buy-bar__now">¥999</span>
+    <span class="buy-bar__was">¥1299</span>
+  </p>
+  <a class="btn btn--buy" href="#buy" aria-label="预购伴心，¥999">预购<span class="btn__arrow" aria-hidden="true">→</span></a>
+</div>
+
+<!-- 影片弹窗（F15） -->
+<div class="modal" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="video-modal-title" aria-hidden="true" hidden>
+  <div class="modal__overlay" aria-hidden="true"></div>
+  <div class="modal__panel">
+    <div class="modal__bar" aria-hidden="true">
+      <span class="window__dot"></span>
+      <span class="window__dot"></span>
+      <span class="window__dot"></span>
+      <span class="window__title">BANXIN · 影片</span>
+    </div>
+    <button class="modal__close" type="button" data-modal-close aria-label="关闭">
+      <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+    </button>
+    <div class="modal__body">
+      <h2 class="modal__title" id="video-modal-title">影片还在剪。</h2>
+      <p class="modal__text">首支片子会在首批发货前上线。留个邮箱，剪好先给你看。</p>
+
+      <form class="form" data-form="subscribe" data-source="hero_video_modal" novalidate>
+        <div class="form-alert form-alert--danger" data-alert role="alert" aria-live="polite"></div>
+
+        <div class="field">
+          <label class="field__label" for="vm-email">邮箱地址 <span class="field__req">必填</span></label>
+          <div class="field__control">
+            <input class="input" id="vm-email" name="email" type="email" placeholder="请输入邮箱地址" autocomplete="email" aria-describedby="vm-email-err">
+          </div>
+          <p class="field__error" id="vm-email-err"></p>
+        </div>
+
+        <div class="field">
+          <label class="check" for="vm-consent">
+            <input id="vm-consent" name="consent" type="checkbox" aria-describedby="vm-consent-err">
+            <span>我愿意收到预购与更新邮件，并已阅读<a href="/privacy.html" target="_blank" rel="noopener noreferrer">《隐私政策》</a>。</span>
+          </label>
+          <p class="field__error" id="vm-consent-err"></p>
+        </div>
+
+        <input class="hp-field" type="text" name="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button class="btn btn--primary" type="submit">订阅<span class="btn__arrow" aria-hidden="true">→</span></button>
+      </form>
+
+      <div class="success-card" data-success aria-live="polite">
+        <div class="success-card__icon" aria-hidden="true">✓</div>
+        <p class="success-card__title">记下了。</p>
+        <p class="success-card__body" data-success-body></p>
+        <p class="success-card__note">想退订，每封信底部都有链接。</p>
+      </div>
+
+      <p class="modal__secondary">
+        <button class="btn btn--ghost" type="button" data-modal-goto="product">先看看产品</button>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

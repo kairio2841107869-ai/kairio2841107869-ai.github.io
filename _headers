@@ -1,0 +1,55 @@
+# 伴心 BANXIN · 安全头与缓存策略
+# 同时适用于 Cloudflare Pages 与 Netlify（两者都读取产物根目录下的 _headers，语法一致）
+# 由 deploy/build.sh 复制进 dist/。改完必须重新构建才会生效。
+#
+# ── CSP 的定稿依据（实测，不是猜） ────────────────────────────────────
+# 页面里需要放行的三样「内联」东西：
+#   1) 每个页面 <head> 里的一行内联脚本：document.documentElement.classList.add('js-enabled');
+#      → 用 sha256 白名单放行，不用 'unsafe-inline'。5 个页面的这行脚本完全一致，
+#        哈希已核对：sha256-47Y7xRUIVXITmosjladRK60OPYEE3BWeBiiCmfU0d8s=
+#        （deploy/build.sh 每次构建都会重算并比对，脚本一改就构建失败）
+#   2) <script type="application/ld+json"> 结构化数据 → 数据块，不执行，CSP 不管它
+#   3) 内联 SVG（站点所有插图与图标）→ 是 HTML 标记，不是外部资源，CSP 管不到
+# 唯一必须用 'unsafe-inline' 的是 style-src：index.html 有 6 处 style="--enter-delay:120ms"
+# 这类交错动画延时属性。实测把 style-src 收紧到 'self' 会产生 6 条 style-src-attr 违规。
+# 站点无用户可写入的 HTML、无第三方脚本、无 remark/rehype 注入面，
+# 因此 style-src 上的 'unsafe-inline' 不构成可利用的注入路径。
+# img-src 需要 data:，因为章节背景的噪点纹理是 data:image/svg+xml。
+#
+# 安全头挂在 /* 上（而不是 /*.html）：两个平台的 glob 对 /*.html 的实现不完全一致，
+# 挂在 /* 上能保证 5 个页面 100% 拿到 CSP。
+
+/*
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'sha256-47Y7xRUIVXITmosjladRK60OPYEE3BWeBiiCmfU0d8s='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()
+  X-Frame-Options: DENY
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+# HTML 永远回源校验（带 ETag，命中时只有 304，成本极低）
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 资源文件名不带内容哈希（本站零构建），所以不能设 immutable。
+# 7 天 + 后台静默更新：改 CSS/JS 时必须同步改文件名或加 ?v=2（见 docs/maintenance.md §5）
+/assets/css/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/assets/js/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/assets/img/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+# 404 页面绝不能缓存，否则用户会反复看到旧错误页
+/404.html
+  Cache-Control: no-store
+  X-Robots-Tag: noindex

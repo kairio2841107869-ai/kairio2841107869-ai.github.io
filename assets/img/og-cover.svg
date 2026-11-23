@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="og-title og-desc">
+  <title id="og-title">伴心 BANXIN</title>
+  <desc id="og-desc">淡粉底、一台白色麦金塔式的机器，右侧为品牌名与英文标语</desc>
+
+  <!-- OG 分享卡 1200×630（site-spec §7.1 og-image）
+       注：本文件是独立图片资源，无法读取页面 CSS，因此把 design-spec 的色值
+       以自定义属性的形式在这里复写一遍，值必须与 tokens.css 完全一致。 -->
+  <style>
+    :root {
+      --pink-bg: #FDF3F6;
+      --pink-deep: #C24B70;
+      --pink: #EDA7BE;
+      --surface: #FFFBFD;
+      --dark-bg-alt: #2B1A21;
+      --text-strong: #2B1A21;
+      --text-body: #5A3C48;
+      --text-muted: #7D5A67;
+      --border-strong: #E3C2CD;
+      --dev-front-top: #FFFDFE;
+      --dev-front-bottom: #F2E8EC;
+    }
+    .bg        { fill: var(--pink-bg); }
+    .dot       { fill: var(--pink-deep); fill-opacity: .08; }
+    .glow-a    { stop-color: var(--pink); stop-opacity: .22; }
+    .glow-b    { stop-color: var(--pink); stop-opacity: 0; }
+    .shadow-a  { stop-color: var(--text-strong); stop-opacity: .16; }
+    .shadow-b  { stop-color: var(--text-strong); stop-opacity: 0; }
+    .body-t-a  { stop-color: var(--dev-front-top); }
+    .body-t-b  { stop-color: var(--dev-front-bottom); }
+    .body      { fill: url(#g-body); stroke: var(--border-strong); stroke-width: 2; }
+    .screen    { fill: var(--dark-bg-alt); }
+    .rim       { fill: none; stroke: var(--border-strong); stroke-width: 2; }
+    .chin      { fill: var(--pink-deep); }
+    .term      { fill: var(--pink); font-family: "SF Mono", Consolas, "Liberation Mono", monospace; }
+    .cursor    { fill: var(--pink); }
+    .name      { fill: var(--text-strong); font-family: "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", system-ui, sans-serif; font-weight: 700; }
+    .wordmark  { fill: var(--text-strong); font-family: "SF Mono", Consolas, system-ui, sans-serif; font-weight: 700; }
+    .tagline   { fill: var(--text-body); font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; }
+    .en        { fill: var(--text-muted); font-family: "SF Mono", Consolas, system-ui, sans-serif; font-weight: 600; letter-spacing: 5px; }
+  </style>
+
+  <defs>
+    <linearGradient id="g-body" x1="0" y1="0" x2="0" y2="1">
+      <stop class="body-t-a" offset="0"/>
+      <stop class="body-t-b" offset="1"/>
+    </linearGradient>
+    <radialGradient id="g-glow">
+      <stop class="glow-a" offset="0"/>
+      <stop class="glow-b" offset="1"/>
+    </radialGradient>
+    <radialGradient id="g-shadow">
+      <stop class="shadow-a" offset="0"/>
+      <stop class="shadow-b" offset="1"/>
+    </radialGradient>
+    <pattern id="p-dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle class="dot" cx="1" cy="1" r="1"/>
+    </pattern>
+    <mask id="m-fade" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="630">
+      <rect width="1200" height="630" fill="url(#g-fade)"/>
+    </mask>
+    <radialGradient id="g-fade" cx="0.5" cy="0.5" r="0.62">
+      <stop offset="0.35" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+  </defs>
+
+  <rect class="bg" width="1200" height="630"/>
+  <rect width="1200" height="630" fill="url(#p-dots)" mask="url(#m-fade)"/>
+  <ellipse cx="360" cy="330" rx="330" ry="300" fill="url(#g-glow)"/>
+  <ellipse cx="360" cy="556" rx="220" ry="34" fill="url(#g-shadow)"/>
+
+  <!-- 麦金塔式小机器（正面，缩到 300px 宽仍可读） -->
+  <g transform="translate(240 110)">
+    <rect class="body" x="0" y="0" width="240" height="300" rx="30"/>
+    <rect class="rim" x="26" y="26" width="188" height="150" rx="12"/>
+    <rect class="screen" x="30" y="30" width="180" height="142" rx="10"/>
+    <text class="term" x="48" y="86" font-size="20">&gt; 伴心，你在吗？</text>
+    <text class="term" x="48" y="118" font-size="15" opacity=".55">&gt; 系统在线</text>
+    <rect class="cursor" x="196" y="72" width="7" height="18"/>
+    <g class="chin" transform="translate(98 224) scale(5.5)">
+      <path d="M1 0h2v1H1zM5 0h2v1H5zM0 1h8v3H0zM1 4h6v1H1zM2 5h4v1H2zM3 6h2v1H3z"/>
+    </g>
+  </g>
+
+  <!-- 文案：缩到 300px 宽时文字仍可读（site-spec §7.1） -->
+  <g transform="translate(580 0)">
+    <text class="name" x="0" y="262" font-size="86">伴心</text>
+    <text class="wordmark" x="196" y="262" font-size="46" letter-spacing="6">BANXIN</text>
+    <text class="tagline" x="0" y="330" font-size="34">一台麦金塔式的 AI 陪伴主机</text>
+    <text class="tagline" x="0" y="380" font-size="34">在夜里应你一声</text>
+    <text class="en" x="0" y="470" font-size="22">COMPANION FOR EVERY LONELY HEART</text>
+  </g>
+</svg>
