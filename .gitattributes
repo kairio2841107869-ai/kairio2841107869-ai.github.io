@@ -1,0 +1,12 @@
+# 二进制资产：禁止任何换行符转换，否则 GLB 模型会损坏
+*.glb  binary
+*.gltf binary
+*.webp binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.svg  text eol=lf
+*.ico  binary
+
+# 文本：统一 LF，避免 Windows 检出时变成 CRLF
+* text=auto eol=lf
